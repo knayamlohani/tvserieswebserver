@@ -5,9 +5,7 @@ app = express()
 app.set 'port', (process.env.PORT || 5000)
 app.set 'tvdbApiKey', (process.env.TVDB_API_KEY)
 
-app.listen app.get('port') , ->
-  console.log "Node app is running at" + app.get 'port'
-  return
+
 
 tvdbWebService.setTvdbApiKey app.get 'tvdbApiKey'
 
@@ -47,7 +45,12 @@ app.get '/series/seriesId/:id/banners/', (req, res) ->
   return
 
 app.get '/', (req, res)  ->
-  response.end 'Welcome to tvserieswebserver'
+  res.end 'Welcome to tvserieswebserver'
+  return
+
+app.listen app.get('port') , ->
+  console.log "Node app is running at" + app.get 'port'
+  return
 
 
 
