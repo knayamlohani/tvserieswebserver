@@ -14,6 +14,12 @@
 
   tvdbWebService.setTvdbApiKey(app.get('tvdbApiKey'));
 
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
   app.get('/series/seriesName/:name', function(req, res) {
     tvdbWebService.getSeriesByName(req.params.name, function(data) {
       res.end(data);

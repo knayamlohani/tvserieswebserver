@@ -15,17 +15,6 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0
 		},
-	"\/indexn.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/indexn.js",
-		"outputAbbreviatedPath": "\/min\/indexn-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 2,
-		"syntaxCheckerStyle": 0
-		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,

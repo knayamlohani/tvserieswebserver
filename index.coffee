@@ -9,6 +9,12 @@ app.set 'tvdbApiKey', (process.env.TVDB_API_KEY)
 
 tvdbWebService.setTvdbApiKey app.get 'tvdbApiKey'
 
+app.use (req, res, next) -> 
+  res.header "Access-Control-Allow-Origin", "*"
+  res.header "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"
+  next()
+  return
+
 app.get '/series/seriesName/:name', (req, res) ->
   tvdbWebService.getSeriesByName req.params.name, (data) ->
   	res.end data
@@ -51,6 +57,8 @@ app.get '/', (req, res)  ->
 app.listen app.get('port') , ->
   console.log "Node app is running at" + app.get 'port'
   return
+
+
 
 
 
