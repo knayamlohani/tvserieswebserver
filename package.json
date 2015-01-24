@@ -1,0 +1,23 @@
+{
+  "name": "tvserieswebserver",
+  "version": "0.0.1",
+  "description": "A Node.js web server to download your favourite TV Shows from TVDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies" : {
+    "express" : "4.10.7",
+    "tvdbwebservice": "0.0.3"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+  ],
+  "license": "MIT"
+}

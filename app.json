@@ -1,0 +1,7 @@
+{
+  "name": "tvserieswebserver",
+  "description": "A Node.js web server to download your favourite TV Shows from TVDB",
+  "repository": "https://github.com/knayamlohani/tvserieswebserver.git",
+  "logo": "",
+  "keywords": []
+}
