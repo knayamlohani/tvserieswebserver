@@ -25,7 +25,7 @@ app.get '/series/seriesName/:name', (req, res) ->
 
 # responds to requests for series with given id for series data + actors  + banners
 app.get '/series/seriesId/:id/seriesPlusActorsPlusBanners',  (req, res) ->
-  tvdbWebService.getSeriesPlusActorsPlusBanners req.params.id, (data) ->
+  tvdbWebService.getSeriesPlusActorsPlusBannersById req.params.id, (data) ->
   	res.end data
   	return
   return

@@ -29,7 +29,7 @@
   });
 
   app.get('/series/seriesId/:id/seriesPlusActorsPlusBanners', function(req, res) {
-    tvdbWebService.getSeriesPlusActorsPlusBanners(req.params.id, function(data) {
+    tvdbWebService.getSeriesPlusActorsPlusBannersById(req.params.id, function(data) {
       res.end(data);
     });
   });
