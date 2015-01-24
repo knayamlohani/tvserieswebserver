@@ -12,6 +12,8 @@
 
   app.set('tvdbApiKey', process.env.TVDB_API_KEY);
 
+  app.use(express["static"](__dirname + '/public'));
+
   tvdbWebService.setTvdbApiKey(app.get('tvdbApiKey'));
 
   app.use(function(req, res, next) {

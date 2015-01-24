@@ -4,6 +4,7 @@ app = express()
 
 app.set 'port', (process.env.PORT || 5000)
 app.set 'tvdbApiKey', (process.env.TVDB_API_KEY)
+app.use express.static __dirname + '/public' ;
 
 
 
