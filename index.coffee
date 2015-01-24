@@ -2,10 +2,14 @@ tvdbWebService = require 'tvdbwebservice'
 express = require 'express'
 app = express()
 
-app.set 'port', (process.env.PORT)
-app.set 'tvdbApikey', (process.env.TVDB_API_KEY)
+app.set 'port', (process.env.PORT || 5000)
+app.set 'tvdbApiKey', (process.env.TVDB_API_KEY)
 
-tvdbWebService.setTvdbApiKey app.get 'tvdbApikey'
+app.listen app.get('port') , ->
+  console.log "Node app is running at" + app.get 'port'
+  return
+
+tvdbWebService.setTvdbApiKey app.get 'tvdbApiKey'
 
 app.get '/series/seriesName/:name', (req, res) ->
   tvdbWebService.getSeriesByName req.params.name, (data) ->
@@ -46,9 +50,7 @@ app.get '/', (req, res)  ->
   response.end 'Welcome to tvserieswebserver'
 
 
-app.listen app.get 'port' , ->
-  console.log "Node app is running at" + app.get 'port'
-  return
+
 
 
 
